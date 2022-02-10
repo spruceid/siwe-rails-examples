@@ -10,9 +10,8 @@ class SessionsController < ApplicationController
 
   def sign_in
     message = Siwe::Message.from_json_string session[:message]
-    message.signature = params.require(:signature)
 
-    if message.validate
+    if message.validate(params.require(:signature))
       session[:message] = nil
       session[:ens] = params[:ens]
       session[:address] = message.address
@@ -52,7 +51,7 @@ class SessionsController < ApplicationController
 
     session[:message] = message.to_json_string
 
-    render plain: message.personal_sign
+    render plain: message.prepare_message
   end
 
   def sign_out

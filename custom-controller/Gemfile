@@ -10,7 +10,7 @@ gem 'bootsnap', require: false
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'puma', '~> 5.0'
-gem 'rails', '~> 7.0.0'
+gem 'rails', '~> 7.0.1'
 gem 'siwe'
 gem 'sprockets-rails'
 gem 'sqlite3', '~> 1.4'

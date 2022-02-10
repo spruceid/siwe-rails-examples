@@ -1,0 +1,27 @@
+<p class='notice'><%= flash[:notice] %></p>
+<p class='error'><%= flash[:error] %></p>
+
+<dl>
+  <dt>Time.now</dt>
+    <dd><%= Time.now %></dd>
+  <dt>OmniAuth Hash</dt>
+    <dd><%= @omniauth.to_s %></dd>
+  <dt>Message</dt>
+    <dd><%= params[:message] || 'nil' %></dd>
+  <dt>Strategy</dt>
+    <dd><%= params[:strategy] || 'nil' %></dd>
+  <dt>Origin</dt>
+    <dd><%= params[:origin] || 'nil' %></dd>
+  <dt>Remote IP</dt>
+    <dd><%= request.remote_ip || 'nil' %></dd>
+  <dt>Remote Address</dt>
+    <dd><%= request.env['REMOTE_ADDR'] || 'nil' %></dd>
+  <dt>X-Forwarded-For</dt>
+    <dd><%= request.env['HTTP_X_FORWARDED_FOR'] || 'nil' %></dd>
+  <dt>Heroku-Request-ID</dt>
+    <dd><%= request.env['HTTP_HEROKU_REQUEST_ID'] || 'nil' %></dd>
+  <dt>User Agent</dt>
+    <dd><%= request.env['HTTP_USER_AGENT'] || 'nil' %></dd>
+</dl>
+
+<a href='/'>&larr; Login again</a>

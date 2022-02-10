@@ -1,24 +1,15 @@
-# README
+# rails-engine
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This example is based on the `custom-controller` example in
+this same repository, but instead uses [`siwe_rails`](https://github.com/spruceid/siwe_rails)
+to set up the `/siwe/message` and `/siwe/signature` endpoints.
 
-Things you may want to cover:
+The `siwe_rails` gem will redirect the user to a configurable
+endpoint after successfully verifying the signature, and then
+the application can read the user's address and ens, if available,
+in these session variables:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```ruby
+session[SiweRails.SIWE_ENS]
+session[SiweRails.SIWE_ADDRESS]
+```

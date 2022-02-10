@@ -1,24 +1,14 @@
-# README
+# custom-controller
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example of how to add SIWE to a Rails
+application. For that it has two main endpoints:
 
-Things you may want to cover:
+- `/message`: to obtain the SIWE message to sign;
+- `/sign_in`: to verify the signature and sign in/up the user when valid.
 
-* Ruby version
+It uses the `siwe-ruby` library to generate and verify
+the message. For more details on the library,
+[go here](https://github.com/spruceid/siwe-ruby).
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For other ways to add SIWE to your Ruby/Rails application,
+please look at the other examples in this repository.

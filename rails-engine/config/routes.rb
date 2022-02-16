@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post 'sign-in' => 'sessions#sign_in', :as => 'sign-in'
   post 'sign-out' => 'sessions#sign_out', :as => 'sign-out'
 
-  mount SiweRails::Engine => '/'
+  mount SiweRails::Engine => '/siwe'
 
   resources :users
   resources :sessions

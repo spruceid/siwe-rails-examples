@@ -38,9 +38,9 @@ class SessionsController < ApplicationController
   def message
     nonce = Siwe::Util.generate_nonce
     message = Siwe::Message.new(
-      request.host,
+      request.host_with_port,
       params[:address],
-      request.url,
+      "#{request.protocol}#{request.host_with_port}",
       '1',
       {
         statement: 'SIWE Rails Example',

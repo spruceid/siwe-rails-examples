@@ -16,14 +16,20 @@ session[SiweRails.SIWE_ADDRESS]
 
 ## Setup & Running
 
-**You might need to either change the Gemfile's ruby version, or install
-ruby 3.1.0.**
+**You might need to either change the Gemfile's Ruby version, or install
+Ruby 3.1.0.**
 
 First, the database migrations need to be executed with the following
 command:
 
 ```
 bin/rails db:migrate RAILS_ENV=development
+```
+
+Install the dependencies with:
+
+```
+bundle install
 ```
 
 Then run the server with:

@@ -18,7 +18,7 @@ More information can be found at the [project's README](./omniauth/README.md).
 
 ## `rails-engine`
 
-This example uses the rails gem [siwe_rails](https://github.com/spruceid/siwe_rails),
+This example uses the Rails gem [siwe_rails](https://github.com/spruceid/siwe_rails),
 which adds some endpoints that can be used to integrate SIWE into your application.
 
 More information can be found at the [project's README](./rails-engine/README.md).

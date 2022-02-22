@@ -8,8 +8,14 @@ More details about the SIWE OmniAuth gem can be found in this
 
 ## Setup & Running
 
-**You might need to either change the Gemfile's ruby version, or install
-ruby 3.1.0.**
+**You might need to either change the Gemfile's Ruby version, or install
+Ruby 3.1.0.**
+
+Install the dependencies with:
+
+```
+bundle install
+```
 
 Run the server with:
 

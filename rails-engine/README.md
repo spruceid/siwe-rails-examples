@@ -13,3 +13,21 @@ in these session variables:
 session[SiweRails.SIWE_ENS]
 session[SiweRails.SIWE_ADDRESS]
 ```
+
+## Setup & Running
+
+**You might need to either change the Gemfile's ruby version, or install
+ruby 3.1.0.**
+
+First, the database migrations need to be executed with the following
+command:
+
+```
+bin/rails db:migrate RAILS_ENV=development
+```
+
+Then run the server with:
+
+```bash
+bundle exec rails server
+```

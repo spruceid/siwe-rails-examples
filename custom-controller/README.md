@@ -12,3 +12,21 @@ the message. For more details on the library,
 
 For other ways to add SIWE to your Ruby/Rails application,
 please look at the other examples in this repository.
+
+## Setup & Running
+
+**You might need to either change the Gemfile's ruby version, or install
+ruby 3.1.0.**
+
+First, the database migrations need to be executed with the following
+command:
+
+```
+bin/rails db:migrate RAILS_ENV=development
+```
+
+Then run the server with:
+
+```bash
+bundle exec rails server
+```

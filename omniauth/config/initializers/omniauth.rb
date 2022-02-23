@@ -12,8 +12,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     token_endpoint: '/token',
     userinfo_endpoint: '/userinfo',
     jwks_uri: '/jwk',
-    identifier: '4eaa2d76-7d20-47ac-922a-f77927775aeb',
-    secret: '45559d69-8fb5-4acc-8094-624e405c6c54'
+    identifier: '',
+    secret: ''
   }
 
   provider :siwe, issuer: 'https://oidc.login.xyz/', client_options: client_options

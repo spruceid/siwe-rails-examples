@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
   def sign_in
     message = Siwe::Message.from_json_string session[:message]
 
-    if message.validate(params.require(:signature))
+    if message.verify(params.require(:signature), message.domain, message.issued_at, message.nonce)
       session[:message] = nil
       session[:ens] = params[:ens]
       session[:address] = message.address
